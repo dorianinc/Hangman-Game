@@ -1,0 +1,58 @@
+
+body {    
+background-color: #000000;
+color: #ffffff;
+font-family: 'Orbitron', sans-serif;
+overflow: hidden;
+}
+
+header {
+margin-top: 2%;
+margin-bottom: 3%;
+text-align: center;
+}
+.banner {
+    position: relative;
+    left: 0%;
+    height:150px;
+}
+
+.container {
+ margin: auto;
+ text-align: center;
+ 
+}
+
+.content {
+    position: absolute;
+    border: 5px dashed white;
+    left: 40%;
+    height:90%;
+    margin-top: 2%;
+    
+}
+
+
+
+
+.gameContent {
+    position: relative;
+    z-index: 1;
+    left:0%;
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.gif{
+    height:10%;
+}
+.marceline{
+    position: relative;
+    z-index: -1;
+    right: 115%;
+    bottom: 275px;
+    height: 500px;
+
+}
