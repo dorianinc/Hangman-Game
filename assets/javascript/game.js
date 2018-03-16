@@ -1,4 +1,4 @@
-var wordBank = ["kryptonite", "everlong", "always", "pain", "memory", "drive", "pieces", "makedamnsure"];
+var wordBank = ["kryptonite", "everlong", "always", "pain", "memory", "drive", "pieces", "makedamnsure", "marceline"];
 
 var randWord = "";
 var letterInWord = [];
@@ -100,7 +100,8 @@ function songs(){
 
         var audio = new Audio("assets/music/everlong.mp3");
         audio.play();
-		reset();
+        reset();
+        console.log(wins);
     }   else if(rightLetterCounter == underScoreCounter && songName === "a l w a y s" )
         { 
             wins++; 
@@ -150,6 +151,13 @@ function songs(){
             audio.play();
             reset();
         }
+        else if(rightLetterCounter == underScoreCounter && songName === "m a r c e l i n e" )
+        {
+            wins++;
+            var audio = new Audio("assets/music/marceline.mp3");
+            audio.play();
+            reset();
+        }
         else if(guessesLeft == 0)
 	    {
             losses++;
@@ -169,7 +177,7 @@ document.onkeyup = function(event){
     2. its going to pass it through the CheckLetter function 
     */
     var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
-    console.log("Player Guess:", letterGuessed)
+    console.log("wins:", wins);
     checkLetters(letterGuessed)
     songs();
 
